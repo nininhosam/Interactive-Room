@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+}
+main {
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+}
+img#ui {
+    min-width: 50%;
+}
+.item {
+    position: absolute;
+    cursor: pointer;
+}
+img#headphones {
+    min-width: 3%;
+    top: 57.5%;
+    left: 27.2%;
+}
+img#shirt {
+    min-width: 3%;
+    top: 63.75%;
+    left: 27.2%;
+}
+img#pants {
+    min-width: 2.25%;
+    top: 70.75%;
+    left: 27.6%;
+}
+img#body {
+    position: absolute;
+    min-width: 2.9%;
+    top: 57.5%;
+    left:34%;
+    cursor: pointer;
+}
+.interactive {
+    position: absolute;
+    cursor: pointer;
+}
+img#dog {
+    min-width: 4.5%;
+    top: 40%;
+    left: 39%;
+}
+img#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+img#dogHead {
+    position: fixed;
+    min-width: 308px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50.4%);
+    z-index: 4;
+    cursor: pointer;
+}
+div#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.849);
+    z-index: 2;
+}
+.flag {
+    min-width: 48px;
+    top: 81.5%;
+}
+img#pt-br {
+    left: 26.5%;
+}
+img#en {
+    left:29.5%;
+}
