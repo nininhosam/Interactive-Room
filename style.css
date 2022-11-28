@@ -76,9 +76,22 @@ div#overlay {
     min-width: 48px;
     top: 81.5%;
 }
-img#pt-br {
+img#pt_br {
     left: 26.5%;
 }
 img#en {
     left:29.5%;
+}
+div#text {
+    height: 11.5%;
+    width: 15.5%;
+    position: absolute;
+    left: 26.5%;
+    top: 85.5%;
+}
+p#description {
+    font: normal 25px arial;
+    margin-top: 6px;
+    margin-left: 6px;
+    text-align: left;
 }
