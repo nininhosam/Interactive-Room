@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,9 @@
     <title>My Room</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets//icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -19,12 +23,13 @@
             <img src="./assets/br_fl.png" alt="pt_br" id="pt_br" class="interactive flag" onclick="setLanguage(pt_br)">
             <img src="./assets/uk_fl.png" alt="en" id="en" class="interactive flag" onclick="setLanguage(en)">
         </div>
-        <div id="text"> 
+        <div id="text">
             <p id="description"></p>
-    </div>
+        </div>
         <img src="./assets/ui.png" alt="all" id="ui">
     </main>
     <div id="overlay" onclick="off()"></div>
     <script src="./index.js"></script>
 </body>
+
 </html>

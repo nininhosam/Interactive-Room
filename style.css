@@ -1,3 +1,7 @@
+html {
+    font: bold 25px 'Fira Code';
+    color: rgb(94, 94, 94);
+}
 body {
     margin: 0;
 }
@@ -90,7 +94,6 @@ div#text {
     top: 85.5%;
 }
 p#description {
-    font: normal 25px arial;
     margin-top: 6px;
     margin-left: 6px;
     text-align: left;
