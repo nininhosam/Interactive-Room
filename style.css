@@ -173,6 +173,8 @@ div#descText {
     margin-bottom: 4%;
     flex-grow: 1;
     overflow: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
 }
 
 div#descText::-webkit-scrollbar {
