@@ -20,7 +20,7 @@ main {
 }
 
 img#ui {
-    min-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -54,8 +54,8 @@ div#itemSlots {
 .itemSlot {
     display: flex;
     position: absolute;
-    min-width: 89.5%;
-    min-height: 29.5%;
+    width: 89.5%;
+    height: 29.5%;
     left: 6%;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@ div#character {
 }
 
 img#body {
-    min-width: 25%;
+    width: 25%;
     max-height: 100%;
 }
 
@@ -106,7 +106,7 @@ div#room {
 }
 img#dog {
     position: absolute;
-    min-width: 9%;
+    width: 9%;
     top: 80%;
     left: 25%;
 }
@@ -165,7 +165,7 @@ div#flags {
 }
 
 .flag {
-    min-width: 48px;
+    width: 17%;
 }
 
 div#descText {
