@@ -1,53 +1,116 @@
 html {
-    font: bold 25px 'Fira Code';
+    font: bold 25px 'Fira  Code';
     color: rgb(94, 94, 94);
+    user-select: none;
 }
+
 body {
+    background-color: rgb(85, 83, 83);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     margin: 0;
+    pointer-events: stroke;
 }
+
 main {
-    background-color: red;
-    text-align: center;
-    padding: 20px;
+    position: relative;
+    min-width: 90vmin;
 }
+
 img#ui {
-    min-width: 50%;
+    min-width: 100%;
+    display: block;
 }
-.item {
-    position: absolute;
-    cursor: pointer;
-}
-img#headphones {
-    min-width: 3%;
-    top: 57.5%;
-    left: 27.2%;
-}
-img#shirt {
-    min-width: 3%;
-    top: 63.75%;
-    left: 27.2%;
-}
-img#pants {
-    min-width: 2.25%;
-    top: 70.75%;
-    left: 27.6%;
-}
-img#body {
-    position: absolute;
-    min-width: 2.9%;
-    top: 57.5%;
-    left:34%;
-    cursor: pointer;
-}
+
 .interactive {
-    position: absolute;
     cursor: pointer;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+
+/* Inside the inventory */
+div#inventory {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 53.62%;
+    width: 35.6%;
+    height: 26.87%; 
+}
+
+div#itemSlots {
+    position: relative;
+    min-width: 21%;
+    max-height: 81%;
+    top: 11.5%;
+    left: 8%;
+}
+
+.itemSlot {
+    display: flex;
+    position: absolute;
+    min-width: 89.5%;
+    min-height: 29.5%;
+    left: 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    width: 95%; 
+    height: 95%;
+}
+
+div#head {
+    top: 2%;
+}
+
+div#chest {
+    top: 35%;
+}
+
+div#leg {
+    top: 68%;
+}
+
+
+/* character */
+div#character {
+    display: flex;
+    position: relative;
+    left: 8%;
+    top: 11.2%;
+    height: 82%;
+    width: 62%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img#body {
+    min-width: 25%;
+    max-height: 100%;
+}
+
+
+/* Tequila */
+div#room {
+    position: absolute;
+    width: 100%;
+    height: 53.5%
 }
 img#dog {
-    min-width: 4.5%;
-    top: 40%;
-    left: 39%;
+    position: absolute;
+    min-width: 9%;
+    top: 80%;
+    left: 25%;
 }
+
 img#popup {
     position: fixed;
     top: 50%;
@@ -55,6 +118,7 @@ img#popup {
     transform: translate(-50%, -50%);
     z-index: 3;
 }
+
 img#dogHead {
     position: fixed;
     min-width: 308px;
@@ -64,6 +128,7 @@ img#dogHead {
     z-index: 4;
     cursor: pointer;
 }
+
 div#overlay {
     position: fixed;
     display: none;
@@ -76,25 +141,52 @@ div#overlay {
     background-color: rgb(0, 0, 0, 0.849);
     z-index: 2;
 }
+
+
+/* Description box and Language */
+div#descBox {
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    position: absolute;
+    top: 80.8%;
+    width: 35.6%;
+    height: 19.2%;
+    flex-flow: column wrap;    
+}
+
+div#flags {
+    display: flex;
+    min-width: 91.2%;
+    margin-top: 5.1%;
+    justify-content:space-around;
+    row-gap: 8px;
+    flex-wrap: wrap;
+}
+
 .flag {
     min-width: 48px;
-    top: 81.5%;
 }
-img#pt_br {
-    left: 26.5%;
+
+div#descText {
+    width: 91.2%;
+    margin-bottom: 4%;
+    flex-grow: 1;
+    overflow: scroll;
 }
-img#en {
-    left:29.5%;
+
+div#descText::-webkit-scrollbar {
+    display: none;
 }
-div#text {
-    height: 11.5%;
-    width: 15.5%;
-    position: absolute;
-    left: 26.5%;
-    top: 85.5%;
-}
+
 p#description {
-    margin-top: 6px;
-    margin-left: 6px;
-    text-align: left;
+    color: rgb(97, 97, 97);
+    position: relative;
+    text-align: center;
+    font-size: 3vmin;
+    min-width: 100%;
+    width: 0;
+    min-height: 100%;
+    height: 0;
+    word-wrap: break-word;
 }
