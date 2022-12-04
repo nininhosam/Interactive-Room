@@ -10,15 +10,21 @@
     <link rel="shortcut icon" href="./assets//icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap">
 </head>
+
 <body>
     <main>
+
+        <div id="room">
+            <img src="./assets/dog_small.png" alt="dog" id="dog" class="interactive" draggable="false">
+        </div>
 
         <div id="inventory" class="inventory">
             <div id="itemSlots">
                 <div id="head" class="itemSlot">
-                    <img src="./assets/headphones.png" alt="headphones" id="headphones" class="item interactive" draggable="false">
+                    <img src="./assets/headphones.png" alt="headphones" id="headphones" class="item interactive"
+                        draggable="false">
                 </div>
 
                 <div id="chest" class="itemSlot">
@@ -36,16 +42,22 @@
 
         <div id="descBox">
             <div id="flags">
-                <img src="./assets/br_fl.png" alt="pt_br" id="pt_br" class="interactive flag" onclick="setLanguage(pt_br)" draggable="false">
-                <img src="./assets/uk_fl.png" alt="en" id="en" class="interactive flag" onclick="setLanguage(en)" draggable="false">
+                <img src="./assets/br_fl.png" alt="pt_br" id="pt_br" class="interactive flag"
+                    onclick="setLanguage(pt_br)" draggable="false">
+                <img src="./assets/uk_fl.png" alt="en" id="en" class="interactive flag" onclick="setLanguage(en)"
+                    draggable="false">
             </div>
             <div id="descText">
                 <p id="description"></p>
             </div>
         </div>
-        <div id="room">
-            <img src="./assets/dog_small.png" alt="dog" id="dog" class="interactive" draggable="false">
+
+        <div id="referenceBox">
+            <p id="reftext">My projects:</p>
+            <div id="repos">
+            </div>
         </div>
+
         <img src="./assets/ui.png" alt="all" id="ui" draggable="false">
 
     </main>
