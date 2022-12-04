@@ -45,11 +45,12 @@ const addReps = () => {
     repoList = localStorage.getObj('allRepos')
     repoList.forEach((repo) => {
         if (repo.name != 'Interactive-Room') {
-            let link = `https://nininhosam.github.io/${repo.name}`
+            let htmlURL = `https://nininhosam.github.io/${repo.name}`
+            let repoURL = `https://github.com/nininhosam/${repo.name}`
             let newRepo = document.createElement('a')
             newRepo.setAttribute("id", repo.name)
             newRepo.setAttribute("class", 'repo')
-            newRepo.setAttribute("href", link)
+            newRepo.setAttribute("href", htmlURL)
             newRepo.setAttribute("target", "_blank")
             repoSlots.appendChild(newRepo)
 
@@ -58,6 +59,16 @@ const addReps = () => {
             repoText.setAttribute("class", 'repoText')
             repoText.innerHTML = repo.name.replace('-', ' ')
             newRepo.appendChild(repoText)
+
+            let gitBox = document.createElement('a')
+            gitBox.setAttribute('id', 'gitBox')
+            gitBox.setAttribute("href", repoURL)
+            gitBox.setAttribute("target", "_blank")
+            newRepo.appendChild(gitBox)
+            let gitIcon = document.createElement('img')
+            gitIcon.setAttribute('id', 'gitIcon')
+            gitIcon.setAttribute('src', './assets/git_dark.png')
+            gitBox.appendChild(gitIcon)
         }
     })
 }

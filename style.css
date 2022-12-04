@@ -265,3 +265,16 @@ div#repos::-webkit-scrollbar {
     top: 3%;
     left: 3%;
 }
+
+#gitBox {
+    position: absolute;
+    left: 2%;
+    bottom: -5%;
+    width: 15%;
+}
+
+#gitIcon {
+    left: 0;
+    width: 100%;
+
+}
