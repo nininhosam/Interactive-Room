@@ -26,14 +26,7 @@ const en = {
 const setLanguage = lg => lang = lg;
 var lang = pt_br
 
-Storage.prototype.setObj = function (key, obj) {
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function (key) {
-    return JSON.parse(this.getItem(key))
-}
-var repoList = localStorage.getObj('allRepos')
-
+//set buttons for each repository
 const loadRepos = async cb => {
     fetch(`https://api.github.com/users/nininhosam/repos`)
         .then(res => res.json())
@@ -42,7 +35,6 @@ const loadRepos = async cb => {
         })
 }
 const addReps = () => {
-    repoList = localStorage.getObj('allRepos')
     repoList.forEach((repo) => {
         if (repo.name != 'Interactive-Room') {
             let htmlURL = `https://nininhosam.github.io/${repo.name}`
@@ -72,17 +64,20 @@ const addReps = () => {
         }
     })
 }
-(async () => {
-    if (repoList == null) {
-        loadRepos((res) => {
-            localStorage.setObj('allRepos', res);
-            addReps()
-        })
-    } else {
-        addReps()
-    }
-})()
+loadRepos((res) => {
+    repoList = res
+    addReps()
+}) 
 
+//dog popup
+function on() {
+    overlay.style.display = "block"
+}
+function off() {
+    overlay.style.display = "none"
+    popup.remove()
+    dogHead.remove()
+}
 dog.addEventListener("click", () => {
     const popup = document.createElement("img")
     popup.setAttribute("src", "./assets/dog_bg.png")
@@ -103,15 +98,7 @@ dog.addEventListener("click", () => {
     on()
 })
 
-function on() {
-    overlay.style.display = "block"
-}
-function off() {
-    overlay.style.display = "none"
-    popup.remove()
-    dogHead.remove()
-}
-//descriptions
+//description for hovered elements
 document.querySelectorAll(".interactive").forEach(element => {
     element.addEventListener("mousemove", () => {
         description.innerHTML = lang[element.id]
@@ -122,7 +109,8 @@ document.querySelectorAll(".interactive").forEach(element => {
         }, 7000);
     })
 });
-//box shadow
+
+//box shadow for pressed buttons
 document.querySelectorAll(".repo").forEach(element => {
     element.addEventListener("mousedown", () => {
         element.style.boxShadow = "inset 0.4vmin 0.6vmin 0 #000";
