@@ -106,7 +106,9 @@ document.querySelectorAll(".interactive").forEach(element => {
         description.innerHTML = lang[element.id]
     })
     element.addEventListener("mouseout", () => {
-        description.innerHTML = ""
+        setTimeout(() => {
+            description.innerHTML = ""
+        }, 7000);
     })
 });
 //box shadow
